@@ -1,0 +1,150 @@
+/* comentario */
+/* en juego de pares
+propiedad + valor
+puedo tener mas de una propiedad para esa etiqueta
+*/
+
+/* tres maneras de aplicar estilos */
+
+/* mediante nombre de etiquetas */
+
+header {
+    background-color: #0E0D0D;
+    text-align: center;
+}
+
+/* traer del otro archivo... */
+
+/* Ruta de especificidad */ 
+
+header nav ul li a {  /* se utiliza sin comas por si pones comas le aplica a cada elemento */
+    color: whitesmoke; 
+    text-decoration: none;
+    font-size: 30px;
+    background-color: #C66E0C;
+    border-radius: 20px;
+}
+
+
+/* Mediante class (.) --> para grupos (estilos reutilizables) */
+
+/* puede ser con ruta de espcifidad + .class o slo .class, la diferencia es si aplica solo para un div o para todos*/
+
+main .div1, .div2 {  /* aplica a ambos div (se divide con  ",") */
+    background-color: #C66E0C;
+}
+
+
+
+/* Mediante ID (#) --> para etiquetas individuales (tiene mas jerarquia) */
+
+#footer {
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+/* unidades de medidas */
+/* absolutas y relativas */
+/* ejemplo de relativa */
+
+main div div {
+    width: 30px; /* si la achicamos no le bajamos peso solo tamaño */
+}
+
+header nav ul li {
+
+}
+
+/* unidades relativas REM y EM*/
+/* REM = 16px se pueden usar decimales, toma el valor de html */
+h1{
+    font-size: 2.3rem;
+}
+
+/* EM */
+/* toma el valor del contenedor mas cercano, en este caso el titulo principal */
+.div2{
+    font-size: 20px;
+}
+h2 {
+    font-size: 2em;
+}
+
+/* nomenclatura  de class/id/nombre de carpeta*/
+
+/* CamelCase */ /*ejemplo: estoEsCamelCase */
+
+.footerDiv {
+background-color: aquamarine;
+}
+/* khebab-case */ /* ejemplo: esto-es-kebab-case */
+
+/* BEM = Bloque Elemento Modificador */
+
+
+/* **************** Clase 11-12 ****************************************************************************** */
+
+/* BOX MODEL */
+/* RESET */
+/* "*"= selector universal */
+* {
+    margin: 0; /* M0 */
+    padding: 0; /* P0 */
+    box-sizing: border-box; /* toma como numero final el alto y ancho que le genere a la caja, es decir, todo sumando los pading, border, etc */ /* si lo saco, el contenido crece por que se suman los valores */
+    /* estas tres son necesarias */
+}
+
+.caja{
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
+    margin: 50px;
+
+    border: 10px dashed black;
+    padding: 100px;
+
+}
+
+/* FLEX */
+/* Trabaja sobre etiquetas contenedoras o padre o bloque, no en cualquier etiqueta, solo las que contienen algo */
+/* Flex es responsive */
+
+
+header {
+    display: flex; /* direccion or defecto es row = fila */
+    /*flex-direction: column; */
+    /* si pongo ROW REVERSE se invierten, el log pasa a la derecha */
+    /* Si pongo colum reverse lo mismo */
+    justify-content: space-around; /* alinea horizontal, hay varias posibilidades */
+    align-items: center; /* vertical */
+    height: 100px;
+
+}
+
+header nav ul {
+    display: flex; /* aca trabajo sobre la etiqueta contenedora UL */
+    /* similar a MARGIN puede ser row gap p colum gap */
+    gap: 10px;
+
+}
+
+/* propiedades de alineacion: aline o justify */
+/* extension para ver las imagenes al costado: IMAGE PREVIEW. MATERIAL ICON tambien */
+
+main h1 {
+    text-align: center;
+
+}
+
+main .galeria-img {
+    display: flex;
+    flex-wrap: wrap; 
+    /* por defecto viene NOWRAP esto hace no que sea responsive */
+    /* si le pongo WRAP y las imagenes no entran a la pantalla se genera una linea nueva */
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+/* BOX SHADOW trabaja con tres propiedades 4px 5px (10px desenfoque) COLOR */ 

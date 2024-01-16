@@ -1,0 +1,9 @@
+Estados de GIT: 
+- modified: uno o mas archivos han sido modificados, pero los cambios aún no han sido confirmados. 
+- commited: cambios guardados dentro de la memoria.
+- staged: preparado, los cambios están en la version nueva. 
+
+Momentos de GIT:
+- Working directory: dierectorio de trabajo. 
+- Staging area: area de preparacion.
+- GIT directory (repositorio): 
